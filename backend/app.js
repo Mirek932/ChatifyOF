@@ -17,7 +17,7 @@ var subdomainOptions = {
   base: 'chatifyof.com'
 };
 
-const port = 8125;
+const port = 3000;
 const appadress = 'http://['+appid+']:'+port;
 const blacklist = require("./storage/blacklist.json")
 var modUserIds = ['f7Fn2NZH3'];
