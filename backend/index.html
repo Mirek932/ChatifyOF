@@ -15,6 +15,10 @@
 
 
 <body onload="elapsedTimeStop()">
+  <div class="messagesInfo">
+    <p style="margin-right: 50%;" class="messagesInfoChild">Room Name</p>
+    <img class="messagesInfoChild" src="icons/gui/Account.svg" alt="Members"> <p style="margin-right: 3%;" class="messagesInfoChild">0</p>
+  </div>
   <div id="message_box" class="message_box">
     <ul class="messages" id="messages"></ul>
   </div>
@@ -44,8 +48,9 @@
   <div id="Emojies" class="Emojis">
   </div>
   <p class="response_info" id="response">-------------------</p>
-  <form id="form" action="">
-    <input emojies=0 maxlength="500" placeholder="Type here..." id="input" autocomplete="off" /><button>Send</button>
+  <form class="sendForm" id="form" action="">
+    <input emojies=0 maxlength="500" class="sendMessage" placeholder="Type here..." id="input" autocomplete="off" />
+    <button class="sendButton"><img src="icons/gui/Send.svg" alt="Send"></button>
   </form>
 
   <p class="collapsible" col="Rooms" style="color: red; font-weight: bolder;"><img src="icons/css/open_menu.svg" style="background-color: red;" alt="Expand"><source src="icons/css/open_menu.svg"></p>
@@ -90,7 +95,7 @@
   <div style="display: block;" name="Rooms" id="accounts_inview" class="side_check"> 
     <div>
       <div class="close_icon" onclick="HideAccountGUI()">
-        <img src="icons/gui/x.svg" alt="X">
+        <img src="icons/gui/X.svg" alt="X">
       </div>
       <p class="Username" id="username" style="font-weight: bolder; font-size: larger; color: red;">Account</p>
       <!--form id="room_join">
@@ -146,9 +151,9 @@
 
       <form id="room_create">
         <p style="font-weight: bolder; font-size: small; color: yellowgreen; text-align: left !important; margin-left: 23%;">Brodcast Room</p>
-        <input id="room_name_create" type="text" name="" id="" placeholder="DisplayName">
-        <input id="room_input_create" type="text" name="" id="" placeholder="RoomID">
-        <select name="publicity" title="YES">
+        <input autocomplete="off" class="UsernameChangeInput" id="room_name_create" type="text" maxlength="10" name="" id="" placeholder="DisplayName">
+        <input autocomplete="off" class="UsernameChangeInput" id="room_input_create" type="text" maxlength="20" name="" id="" placeholder="RoomID">
+        <select class="UsernameChangeInput" name="publicity" title="YES">
           <optgroup label="Everyone can see it">
             <option value="Public">Public</option>
           </optgroup>
@@ -156,7 +161,8 @@
             <option value="Private">Private</option>
           </optgroup>
         </select>
-        <button>Brodcast</button>
+        <button class="UsernameChangeInput">Brodcast</button>
+        <br>
     </form>
     </div>
     

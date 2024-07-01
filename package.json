@@ -4,14 +4,23 @@
   "description": "Chatify for everyone who wants it :D",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon backend/app.js --ignore message.json"
+    "start": "nodemon backend/app.js --ignore ./storage/",
+    "debug": "nodemon debug.js --ignore ./storage/",
+    "run_backup": "nodemon app-backup.js --ignore ./storage/",
+    "create_backup": "@type app.js > app-backup.js",
+    "clear_messages": "@type demo.json > ./storage/message.json"
   },
   "author": "Mirek Reuter; Emilian Ziegler",
   "license": "ISC",
   "dependencies": {
-    "git": "^0.1.5",
+    "colors": "^1.4.0",
+    "express": "^4.19.2",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.1-security",
     "nodemon": "^3.0.1",
-    "socket.io": "^4.7.2",
-    "subdomain": "^1.2.0"
+    "os": "^0.1.2",
+    "path": "^0.12.7",
+    "promises": "^0.2.5",
+    "socket.io": "^4.7.5"
   }
 }

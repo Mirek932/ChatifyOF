@@ -29,31 +29,32 @@
         background-color: #011226;
 
     }
-
-    #form {
-        background: rgba(0, 0, 0, 0.15);
+    .sendForm{
+        background: rgb(1 24 51);
         padding: 0.25rem;
         position: fixed;
         bottom: 0;
         left: 0;
         right: 0;
+        margin-right: 15%;
         display: flex;
         height: 3rem;
         box-sizing: border-box;
     }
 
-    #input {
+    .sendMessage {
         border: none;
         padding: 0 1rem;
         flex-grow: 1;
         border-radius: 2rem;
         margin: 0.25rem;
-        background-color: rgb(43, 43, 95);
+        margin-left: 20%;
+        background-color: rgb(45, 45, 120);
         font-size: larger;
         color: #011226;
     }
 
-    #input:focus {
+    .sendMessage:focus {
         outline: none;
     }
 
@@ -137,7 +138,7 @@
         position: absolute;
     }
 
-    #form>button {
+    .sendButton {
         color: #ffffff;
         background-color: #0d55ac;
         border: none;
@@ -158,6 +159,8 @@
     .Rooms_Containers{
         background-color: #031834;
         text-align: center;
+        height: 3%;
+        padding-top: 0.85%;
     }
 
     .inputRoomGUI{
@@ -195,7 +198,7 @@
         left: 0;
         z-index: 5;
         position: absolute;
-        height: 91.5%;
+        height: 100%;
         overflow: scroll;
         background-image: linear-gradient(to bottom, #042045 3px, #073065 50px);
     }
@@ -368,17 +371,17 @@
         display: block;
         position: absolute;
         padding-left: 1%;
-        height: 90%;
+        height: 87%;
         font-size: larger;
         margin-left: 17%;
         width: 67%;
         background-color: #011833;
-        box-shadow: 13px 0px 20px 0px black inset;
-        overflow: scroll;
+        overflow-y:scroll;
+        overflow-x:hidden;
     }
 
     .message {
-        background-color: rgba(255, 0, 0, 0);
+        background-color: rgba(28, 19, 19, 0);
         color: saddlebrown;
         font-size: larger;
         font-stretch: narrower;
@@ -430,16 +433,34 @@
         overflow: scroll;
         position: absolute;
     }
+    .messagesInfo{
+        position: absolute;
+        background-color: #031834;
+        width: 85%;
+        top: 0;
+        height: 3.65%;
+        margin-right: 15%;
+        text-align: right;
+    }
+    .messagesInfoChild{
+        display: inline-block;
+        color: #277cec;
+        font-weight: bolder;
+        font-size: larger;
+        margin: 0;
+    }
 
     .Emoji {
         font-size: 220%;
     }
 
     .response_info {
-        display: flex;
         position: absolute;
-        margin-left: 35%;
-        margin-top: 760px;
+        bottom: 3%;
+        background-color: #011833;
+        height: 4.3%;
+        width: 85%;
+        text-align: center;
         color: rgb(41, 76, 146);
         font-weight: bolder;
         font-size: large;

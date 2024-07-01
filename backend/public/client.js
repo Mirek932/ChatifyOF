@@ -158,9 +158,8 @@ socket.on("login", function (name, passcode, description, email){
   localStorage.setItem("email", email);
   ShowInfo("Success logedin with name: " + name);
 });
-socket.on("Login Error", function (error){
-  document.getElementById("USInfo").innerHTML = error;
-  if(error == "Success logined!") //IMPORTANT: LET THIS MESSAGE THE SAME LIKE IN APP.js
+socket.on("Login Error", function (error, isSuccess){
+  if(isSuccess)
     {
       HideAccountGUI();
       ShowInfo(error);

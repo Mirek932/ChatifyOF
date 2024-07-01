@@ -192,7 +192,7 @@ io.on('connect', (socket) => {
   //  socket.emit('reload');
 });
 var alreadySetReloadTimeout = false;
-var reloadTime = 10 /*SECONDS */ * 1000 // the left number means the seconds;
+var reloadTime = 1 /*SECONDS */ * 1000 // the left number means the seconds;
 
 io.on('connection', (socket) => {
   socket["clientID"] = "Test1234FD";
@@ -370,7 +370,7 @@ io.on('connection', (socket) => {
             
             console.log(colors.red(passcode));
             io.emit("login", decodedNewName, passcode, description, email);
-            io.emit("Login Error", "Success logined!"); // IMPORTANT: SUCCESS LOGINED MUST BE ALSO CHANGED IN THE CLIENT LOGIN ERROR METHOD
+            io.emit("Login Error", "Success logined!", true);
           } else
           {
             //Passcode is incorrect give error message!
@@ -394,7 +394,7 @@ io.on('connection', (socket) => {
             
               io.emit("login", decodedNewName);
               // Give message, that a new Account can be created
-            io.emit("Login Error", "Account success Created!");
+            io.emit("Login Error", "Account success Created!", true);
             if(!alreadyDecoded)
               { //it isnt decodede, which means newName is NOT numbers
                 var newPrototypeName = {
