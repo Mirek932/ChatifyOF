@@ -396,7 +396,7 @@ io.on('connection', (socket) => {
               // Give message, that a new Account can be created
             io.emit("Login Error", "Account success Created!", true);
             if(!alreadyDecoded)
-              { //it isnt decodede, which means newName is NOT numbers
+              { //it isnt decodede, which means newName is NOT numbers!
                 var newPrototypeName = {
                   "name": newName, //let it newName because it should NOT write the encoded things
                   "passcode": passcode,
