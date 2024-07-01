@@ -160,7 +160,12 @@ socket.on("login", function (name, passcode, description, email){
 });
 socket.on("Login Error", function (error){
   document.getElementById("USInfo").innerHTML = error;
-  ShowInfo("Failed to login: " + error);
+  if(error == "Success logined!") //IMPORTANT: LET THIS MESSAGE THE SAME LIKE IN APP.js
+    {
+      HideAccountGUI();
+      ShowInfo(error);
+    } else
+      ShowInfo("Failed to login: " + error);
 });
 socket.on('append Room', function (room_ID, name, username_) {
   //<img src="icons/Rooms/delete.svg" alt="Delete">

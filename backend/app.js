@@ -370,7 +370,7 @@ io.on('connection', (socket) => {
             
             console.log(colors.red(passcode));
             io.emit("login", decodedNewName, passcode, description, email);
-            io.emit("Login Error", "Success logined!");
+            io.emit("Login Error", "Success logined!"); // IMPORTANT: SUCCESS LOGINED MUST BE ALSO CHANGED IN THE CLIENT LOGIN ERROR METHOD
           } else
           {
             //Passcode is incorrect give error message!
