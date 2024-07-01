@@ -1,0 +1,498 @@
+@media (min-width:960px) {
+    .Field {
+        width: 200px;
+        height: 200px;
+        background-color: #ff3535;
+        border: 1px solid #000;
+    }
+
+    .collapsible{
+        position: absolute;
+        display: inline;
+    }
+     
+    .jl_button{
+        transition: all 200ms;
+        background-color: rgba(255, 140, 0, 0.303) !important;
+    }
+    .jl_button:hover{
+        transition: all 200ms;
+        background-color: rgba(255, 140, 0, 0.625) !important;
+    }
+
+    body {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        padding-bottom: 3rem;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background-color: #011226;
+
+    }
+
+    #form {
+        background: rgba(0, 0, 0, 0.15);
+        padding: 0.25rem;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        height: 3rem;
+        box-sizing: border-box;
+    }
+
+    #input {
+        border: none;
+        padding: 0 1rem;
+        flex-grow: 1;
+        border-radius: 2rem;
+        margin: 0.25rem;
+        background-color: rgb(43, 43, 95);
+        font-size: larger;
+        color: #011226;
+    }
+
+    #input:focus {
+        outline: none;
+    }
+
+    .input {
+        border: none;
+        padding: 0 1rem;
+        flex-grow: 1;
+        border-radius: 2rem;
+        margin: 0.25rem;
+        background-color: rgb(43, 43, 95);
+        font-size: larger;
+        color: #011226;
+    }
+
+    .input:focus {
+        outline: none;
+    }
+
+    @keyframes bigger {
+        from {
+            background-color: red;
+            color: black;
+            padding-bottom: 1.4rem;
+        }
+
+        to {
+            background-color: rgba(0, 0, 0, 0);
+            color: red;
+            padding-bottom: 1.4rem;
+        }
+    }
+
+    .mps-text {
+        background-color: #083d7e;
+        border: 3px 3px black;
+        border-radius: 99px;
+        position: absolute;
+        box-shadow: 7px 5px 11px black;
+    }
+
+    .mps-1 {
+        margin-top: 1%;
+        margin-left: 89.5%;
+        height: 0%;
+        width: 5%;
+        padding-bottom: 1%;
+        font-size: medium;
+        color: rgb(1, 0, 6);
+        font-weight: bolder;
+    }
+
+    .mps-2 {
+        margin-top: 1%;
+        margin-left: 94.9%;
+        height: 0%;
+        width: 5%;
+        padding-bottom: 1%;
+        font-size: medium;
+        color: rgb(1, 0, 6);
+        font-weight: bolder;
+    }
+
+    .mps-3 {
+        margin-top: 2.7%;
+        margin-left: 89.5%;
+        height: 0%;
+        width: 5%;
+        padding-bottom: 1%;
+        font-size: medium;
+        color: rgb(1, 0, 6);
+        font-weight: bolder;
+    }
+
+    .mps-info {
+        color: blue;
+        font-weight: bolder;
+        margin-top: 17%;
+        margin-left: 90.5%;
+        height: 300px;
+        overflow: hidden;
+        position: absolute;
+    }
+
+    #form>button {
+        color: #ffffff;
+        background-color: #0d55ac;
+        border: none;
+        padding: 0 1rem;
+        margin: 0.25rem;
+        border-radius: 3px;
+        outline: none;
+    }
+
+    #board {
+        height: 10006%;
+    }
+
+    .Rooms_Containers{
+        background-color: #031834;
+        text-align: center;
+    }
+
+    .inputRoomGUI{
+        background-color: #032a5d;
+        border: solid rgb(0, 0, 58);
+        background: url("../icons/gui/search.svg") no-repeat scroll 1px 1px;
+        padding-left: 30px;
+        color: red;
+        width: 40%;
+    }
+
+    .RoomsGUIButton{
+        transition: all 200ms;
+        background-color: #032a5d;
+        border: solid rgb(0, 0, 58);
+    }
+    .RoomsGUIImage{
+        width: 60%;
+        height: 60%;
+    }
+    .RoomsGUIButton:hover{
+        transition: all 200ms;
+        background-color: #003376;
+        border: solid rgb(0, 0, 165);
+    }
+    .RoomsGUIButton:active{
+        transition: all 200ms;
+        background-color: #277cec;
+        border: solid rgb(0, 0, 108);
+    }
+
+    .Rooms_List {
+        top: 0;
+        width: 17%;
+        left: 0;
+        z-index: 5;
+        position: absolute;
+        height: 91.5%;
+        overflow: scroll;
+        background-image: linear-gradient(to bottom, #042045 3px, #073065 50px);
+    }
+
+    .InfoText{
+        position: absolute;
+        background-color: red;
+        display: inline;
+        width: 100%;
+        overflow-y: hidden;
+        height: 3rem;
+        bottom: -100px;
+        font-size: larger;
+        font-weight: bolder;
+        text-align: center;
+        animation-duration: 1s;
+        animation-name: show;
+        animation-iteration-count: infinite;
+    }
+    @keyframes show{
+        0% {
+            bottom: -100px;
+        }
+        50% {
+            bottom: -1rem;
+        }
+        80%
+        {
+            bottom: -1rem;
+        }
+        100% {
+            bottom: -100px;
+        }
+    }
+
+    /* width */
+    ::-webkit-scrollbar {
+        width: 20px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #030e2e;
+        border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #081f64;
+    }
+
+    .room_class {
+        font-weight: bolder;
+        color: #0c53aa;
+        font-size: larger;
+        background-color: #061e3e;
+        margin-top: 5px;
+        margin-bottom: 4px;
+    }
+    .close_icon{
+        transition: all 200ms;
+        text-align: left !important;
+        
+        background-color: red; 
+        
+
+        width: 1.5rem; 
+        height: 1.5rem; 
+        
+        margin: 0.3rem;
+    }
+    .close_icon:hover{
+        transition: all 200ms;
+        background-color: rgb(255, 96, 96); 
+    }
+    .side_check {
+        background-color: #042045;
+        margin-right: 83%;
+        overflow: hidden;
+        position: absolute;
+        width: 50%;
+        height: 25%;
+        text-align: center;
+        top: 25%;
+        left: 25%;
+        z-index: 10 !important;
+        box-shadow: 14px 13px 30px 6px black;
+        --animation-name: appear;
+        --animation-duration: 1s;
+        --animation-iteration-count: infinite;
+        --animation-play-state: running;
+    }
+    @keyframes appear{
+        0%{ background-color: #04204500; top: -25%;};
+        100%{ background-color: #042045; top: 25%;};
+    }
+    @keyframes disappear{
+        0%{ background-color: #042045; top: 25%;};
+        100%{ background-color: #04204500; top: -25%;};
+    }
+
+    .Rooms_Button:hover{
+        box-shadow: 4px 3px 7px 1px black;
+    }
+
+    @keyframes expand{
+        0% {height: 100%;}
+        90% {height: 0%}
+        100% {display: none;}
+    }
+
+    @keyframes inpand{
+        0% {height: 0%;}
+        90% {height: 100%}
+        100% {display: block;}
+    }
+
+    .message_box {
+        background-color: red;
+    }
+
+    .hide{
+        position: relative;
+        top: -58px; 
+        left: 51px;
+    }
+
+    .load-text {
+        color: rgb(1, 53, 184);
+        font-weight: bolder;
+        margin-top: 20%;
+        margin-left: 90.5%;
+        height: 300px;
+        overflow: hidden;
+        position: absolute;
+    }
+
+    .in_sided {
+        padding: 3%;
+        font-weight: bolder;
+        font-size: larger;
+        color: #0d55ac;
+        box-shadow: 9px 8px 10px 2px black;
+        border-radius: 20px;
+        margin: 5%;
+    }
+
+    .in_sided:hover {
+        color: #ffffff;
+    }
+
+    .Inputs {
+        background-color: rgb(6, 47, 77);
+        border-radius: 4px;
+        box-shadow: 6px 3px 15px 4px rgb(10, 6, 79);
+        padding-left: 10px;
+        font-size: large;
+        width: 80%;
+        color: #a3ccff;
+        font-weight: bolder;
+    }
+
+    .messages {
+        display: block;
+        position: absolute;
+        padding-left: 1%;
+        height: 90%;
+        font-size: larger;
+        margin-left: 17%;
+        width: 67%;
+        background-color: #011833;
+        box-shadow: 13px 0px 20px 0px black inset;
+        overflow: scroll;
+    }
+
+    .message {
+        background-color: rgba(255, 0, 0, 0);
+        color: saddlebrown;
+        font-size: larger;
+        font-stretch: narrower;
+        font-weight: bolder;
+        position: relative;
+        white-space: normal;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-shadow: 2px 2px 4px black;
+    }
+    .inline {
+        display: inline;
+        background-color: rgba(255, 0, 0, 0);
+    }
+    .inline:hover{
+        background-color: rgba(255, 0, 0, 0) !important;
+    }
+    .inline:active{
+        background-color: rgba(255, 0, 0, 0) !important;
+    }
+    .message:hover{
+        background-color: rgba(255, 0, 0, 0.22);
+    }
+    .InfoButton{
+        background-color: rgb(166, 0, 0);
+        border-radius: 10px;
+        border: solid  rgb(157, 63, 0) 3px;
+    }
+    .InfoButton:hover{
+        background-color: rgb(224, 0, 0);
+        border: solid  rgba(157, 63, 0, 0.749) 3px;
+    }
+    .InfoButton:active{
+        background-color: rgb(255, 42, 42);
+        border: solid  rgba(255, 119, 28, 0.329) 3px;
+    }
+    .InfoButtons{
+        position: absolute;
+    }
+    .message:active{
+        transition: all 100ms;
+        background-color: rgba(255, 0, 0, 0.524);
+    }
+
+    .Emojis {
+        margin-top: 25%;
+        margin-left: 90.5%;
+        height: 384px;
+        overflow: scroll;
+        position: absolute;
+    }
+
+    .Emoji {
+        font-size: 220%;
+    }
+
+    .response_info {
+        display: flex;
+        position: absolute;
+        margin-left: 35%;
+        margin-top: 760px;
+        color: rgb(41, 76, 146);
+        font-weight: bolder;
+        font-size: large;
+    }
+
+    .Emojie-text {
+        margin-top: 23%;
+        margin-left: 90.5%;
+        height: 300px;
+        overflow: hidden;
+        position: absolute;
+    }
+
+    .UsernameInput {
+        background-color: #001346;
+        border: 3px dotted;
+        border-radius: 3px;
+        font-size: larger;
+        font-weight: bolder;
+        color: red;
+        text-align: center;
+        padding-left: 3%;
+        margin-left: 3%;
+        width: 88%;
+    }
+
+    .Username {
+        text-align: center;
+    }
+
+    .usernameButton {
+        text-align: center;
+        margin-left: 15%;
+        width: 50%;
+        margin-left: 15%;
+        margin-top: 10px;
+        background-color: #00000000;
+        border-radius: 3px;
+        border: 2px dashed;
+        color: red;
+        font-weight: bold;
+        font-size: large;
+    }
+}
+
+.image {
+transition: all 200ms;
+    width: 40px;
+    background-color: rgba(255, 0, 0, 0.754);
+    border-radius: 10px;
+    margin: 3px;
+}
+.image:hover {
+transition: all 200ms;
+background-color: rgba(255, 0, 0, 0.435);
+}
+.image:active {
+    transition: all 200ms;
+    background-color: rgb(255, 0, 0);
+}

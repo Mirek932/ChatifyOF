@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de-en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatify</title>
+  <link rel="icon" type="image/png" href="icons/Icon.ico">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/handy.css" />
+</head>
+
+
+<body onload="elapsedTimeStop()">
+    <center style="position: absolute; left: 35%; z-index: 5; text-align: center;">
+        <h1 style="color: red;">The Server just restarted please wait</h1>
+        <p style="color: red;">We send you in just a few seconds to our main Server</p>
+
+        <p onclick="window.location.pathname = 'chat';" style="color: red;">if it doesn't send you back click here</p>
+    </center>
+    <video width="100%" height="100%" style="position: relative;" loop autoplay muted> 
+      <source src="video/ChatifyLoop.mp4" type="video/mp4">
+      CHATIFY </video>
+
+    <script src="../socket.io/socket.io.js"></script>
+    <script src="../scripts/refesh.js"></script>
+</body>
+
+</html>

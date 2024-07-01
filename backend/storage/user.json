@@ -1,0 +1,49 @@
+[
+    {
+        "name": "TheMian",
+        "passcode": "1234",
+        "email": "mirekreuter@web.de"
+    },
+    {
+        "name": "",
+        "passcode": "",
+        "description": "The Error",
+        "email": "a@a"
+    },
+    {
+        "name": "MianProGamer",
+        "passcode": "2211",
+        "description": {},
+        "email": "mr@web.de"
+    },
+    {
+        "name": "   ",
+        "passcode": "   ",
+        "description": {},
+        "email": "qa@asd"
+    },
+    {
+        "name": "newUser",
+        "passcode": "idk",
+        "description": {},
+        "email": "d@as"
+    },
+    {
+        "name": "dasf",
+        "passcode": "idk",
+        "description": {},
+        "email": "dd@as"
+    },
+    {
+        "name": "Sonrandomtyp",
+        "passcode": "   ",
+        "description": {},
+        "email": "afdasfd@adsfafd"
+    },
+    {
+        "name": "BastardGHG",
+        "passcode": "12346789",
+        "description": {},
+        "email": "w@sdf"
+    }
+]

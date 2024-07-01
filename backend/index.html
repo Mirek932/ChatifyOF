@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="de-en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#011226" />
+  <title>Chatify</title>
+  <link rel="icon" type="image/png" href="icons/Icon.ico">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/handy.css" />
+  <link rel="manifest" href="scripts/manifest.json">
+  <link rel="apple-touch-icon" href="icons/Icon.png"></link>
+</head>
+
+
+<body onload="elapsedTimeStop()">
+  <div id="message_box" class="message_box">
+    <ul class="messages" id="messages"></ul>
+  </div>
+
+  <form action="post">
+    <button class="mps-1 mps-text">Post</button>
+  </form>
+  <form action="chat">
+    <button class="mps-text mps-2" style="background-color: rgb(255, 0, 0);">Chat</button>
+  </form>
+  <form action="profile">
+    <button class="mps-text mps-3">Profiles</button>
+  </form>
+
+
+  <p class="mps-info" style="margin-top: 14.5%; color: rgb(151, 0, 0);">LOAD TIME</p>
+
+  <p class="mps-info" style="margin-top: 15.8%;" id="loadTimeTwo">Document Time: -</p>
+  <p class="mps-info" id="loadTime" style="margin-top: 16.8%;">Server Time: -</p>
+  <p class="mps-info" style="margin-top: 18%;" id="loadTimeThree">Start Time: -</p>
+
+
+  <p class="mps-info" style="margin-top: 20%; color: rgb(151, 0, 0);">PING/MPS</p>
+
+  <p class="load-text" style="margin-top: 21.5%;" id="mps">MPS: -</p>
+  <p class="Emojie-text" style="color: rgb(151, 0, 0); font-weight: bolder; ">Emojis</p>
+  <div id="Emojies" class="Emojis">
+  </div>
+  <p class="response_info" id="response">-------------------</p>
+  <form id="form" action="">
+    <input emojies=0 maxlength="500" placeholder="Type here..." id="input" autocomplete="off" /><button>Send</button>
+  </form>
+
+  <p class="collapsible" col="Rooms" style="color: red; font-weight: bolder;"><img src="icons/css/open_menu.svg" style="background-color: red;" alt="Expand"><source src="icons/css/open_menu.svg"></p>
+  <div style="display: none;" name="Rooms" id="account_inview" class="side_check"> 
+    <div>
+      <p class="Username" id="username" style="font-weight: bolder; color: red;">New User</p>
+      <form id="UsernameChange">
+        <input required class="UsernameInput" autocomplete="off" placeholder="username" minlength="3" maxlength="12" type="text"
+        name="Username" id="username_new">
+        <input required class="UsernameInput" style="margin-top: 5px; border: rgb(179, 0, 0) 3px dotted;" placeholder="password" autocomplete="off" minlength="3" maxlength="620" type="password" 
+        name="Passcode" id="passcode">
+        <input required class="UsernameInput" style="margin-top: 5px; border: gray 3px dotted;" placeholder="bio" autocomplete="off" minlength="3" maxlength="620" type="text" 
+        name="Description" id="description">
+        <input required class="UsernameInput" style="margin-top: 5px; border: yellow 3px dotted;" placeholder="emial" autocomplete="off" minlength="3" maxlength="620" type="email" 
+        name="Description" id="email">
+        <p class="UsernameInput" id="USInfo"></p>
+        <button class="usernameButton">Change Name</button>
+      </form>
+    </div>
+    
+    <ul id="rooms"></ul>
+    <!--div class="in_sided" style="display: none;" name="ChatRoom1">
+      <p class="in_sided rooms_info">ChatRoom</p>
+      <form class="in_sided rooms_info" id="room_join">
+        <input maxlength="200" class="Inputs" id="room_input_join" type="text" autocomplete="off"
+          placeholder="RoomID" /> 
+          <button class="jl_button"
+          style="background-color: rgba(255, 255, 255, 0); border-radius: 5px; border: 0px; width: 40px;"> <img
+            src="icons/Rooms/join.svg" alt="Join" class="rooms_out"> </img> </button>
+      </form>
+      <form class="in_sided rooms_info" id="room_create">
+        <input maxlength="16" class="Inputs" autocomplete="off" type="text" id="room_name_create" placeholder="Name">
+        <input maxlength="200" class="Inputs" id="room_input_create" type="text" autocomplete="off"
+        placeholder="RoomID" /> <button class="jl_button"
+        style="background-color: rgba(255, 255, 255, 0); border-radius: 5px; border: 0px;"> <img class="rooms_out"
+          src="icons/ChatRoom/Brodcast.svg" alt="Brodcast"></button>
+      </form>
+    </div-->
+  </div>
+
+
+  <div style="display: block;" name="Rooms" id="accounts_inview" class="side_check"> 
+    <div>
+      <div class="close_icon" onclick="HideAccountGUI()">
+        <img src="icons/gui/x.svg" alt="X">
+      </div>
+      <p class="Username" id="username" style="font-weight: bolder; font-size: larger; color: red;">Account</p>
+      <!--form id="room_join">
+          <p>Join Room</p>
+          <input type="text" name="" id="room_input_join" placeholder="RoomID">
+          <button>Join</button>
+      </form-->
+
+      <form id="room_create">
+        <p style="font-weight: bolder; font-size: small; color: yellowgreen; text-align: left !important; margin-left: 23%;">Brodcast Room</p>
+        <input id="room_name_create" type="text" name="" id="" placeholder="DisplayName">
+        <input id="room_input_create" type="text" name="" id="" placeholder="RoomID">
+        <input id="room_input_create" type="text" name="" id="" placeholder="RoomID">
+        <input id="room_input_create" type="text" name="" id="" placeholder="RoomID">
+        <button>Brodcast</button>
+    </form>
+    </div>
+    
+    <ul id="rooms"></ul>
+    <!--div class="in_sided" style="display: none;" name="ChatRoom1">
+      <p class="in_sided rooms_info">ChatRoom</p>
+      <form class="in_sided rooms_info" id="room_join">
+        <input maxlength="200" class="Inputs" id="room_input_join" type="text" autocomplete="off"
+          placeholder="RoomID" /> 
+          <button class="jl_button"
+          style="background-color: rgba(255, 255, 255, 0); border-radius: 5px; border: 0px; width: 40px;"> <img
+            src="icons/Rooms/join.svg" alt="Join" class="rooms_out"> </img> </button>
+      </form>
+      <form class="in_sided rooms_info" id="room_create">
+        <input maxlength="16" class="Inputs" autocomplete="off" type="text" id="room_name_create" placeholder="Name">
+        <input maxlength="200" class="Inputs" id="room_input_create" type="text" autocomplete="off"
+          placeholder="RoomID" /> <button class="jl_button"
+          style="background-color: rgba(255, 255, 255, 0); border-radius: 5px; border: 0px;"> <img class="rooms_out"
+            src="icons/ChatRoom/Brodcast.svg" alt="Brodcast"></button>
+      <form>
+    </div-->
+  </div>
+
+
+
+
+  <div style="display: none;" name="Rooms" id="rooms_inview" class="side_check"> 
+    <div>
+      <div class="close_icon" onclick="HideRoomGUI()">
+        <img src="icons/gui/x.svg" alt="X">
+      </div>
+      <p class="Username" id="username" style="font-weight: bolder; font-size: larger; color: red;">Create Room</p>
+      <!--form id="room_join">
+          <p>Join Room</p>
+          <input type="text" name="" id="room_input_join" placeholder="RoomID">
+          <button>Join</button>
+      </form-->
+
+      <form id="room_create">
+        <p style="font-weight: bolder; font-size: small; color: yellowgreen; text-align: left !important; margin-left: 23%;">Brodcast Room</p>
+        <input id="room_name_create" type="text" name="" id="" placeholder="DisplayName">
+        <input id="room_input_create" type="text" name="" id="" placeholder="RoomID">
+        <select name="publicity" title="YES">
+          <optgroup label="Everyone can see it">
+            <option value="Public">Public</option>
+          </optgroup>
+          <optgroup label="Only you can see it">
+            <option value="Private">Private</option>
+          </optgroup>
+        </select>
+        <button>Brodcast</button>
+    </form>
+    </div>
+    
+    <ul id="rooms"></ul>
+    <!--div class="in_sided" style="display: none;" name="ChatRoom1">
+      <p class="in_sided rooms_info">ChatRoom</p>
+      <form class="in_sided rooms_info" id="room_join">
+        <input maxlength="200" class="Inputs" id="room_input_join" type="text" autocomplete="off"
+          placeholder="RoomID" /> 
+          <button class="jl_button"
+          style="background-color: rgba(255, 255, 255, 0); border-radius: 5px; border: 0px; width: 40px;"> <img
+            src="icons/Rooms/join.svg" alt="Join" class="rooms_out"> </img> </button>
+      </form>
+      <form class="in_sided rooms_info" id="room_create">
+        <input maxlength="16" class="Inputs" autocomplete="off" type="text" id="room_name_create" placeholder="Name">
+        <input maxlength="200" class="Inputs" id="room_input_create" type="text" autocomplete="off"
+          placeholder="RoomID" /> <button class="jl_button"
+          style="background-color: rgba(255, 255, 255, 0); border-radius: 5px; border: 0px;"> <img class="rooms_out"
+            src="icons/ChatRoom/Brodcast.svg" alt="Brodcast"></button>
+      <form>
+    </div-->
+  </div>
+
+
+  <div class="Rooms_List" name="ChatRoom2" style="display: block;">
+    <div class="Rooms_Containers">
+      <button onclick="DisplayRoomGUI()" class="RoomsGUIButton"><img class="RoomsGUIImage" src="icons/gui/Add.svg" alt="+"></button>
+      <input type="text" class="inputRoomGUI" placeholder="search here...">
+      <button onclick="DisplayAccountGUI()" class="RoomsGUIButton"><img class="RoomsGUIImage" src="icons/gui/Account.svg" alt="A"></button>
+    </div>
+    <div id="appendRooms">
+      <div code="0" class="room_class"><p>Looby</p><img src="icons/Rooms/join.svg" alt="Join" class="image"><img src="icons/Rooms/delete.svg" alt="Join" class="image"></div>
+    </div>
+  </div>
+
+
+
+  <div class="InfoButtons" id="moveEle" style="color: red !important;">
+    <button class="InfoButton"><img src="icons/Chat/Reply.svg" class="InfoImage" alt="Reply"></button> 
+    <button onclick="copyMessages()" class="InfoButton"><img src="icons/Chat/Copy.svg" class="InfoImage" alt="Copy"></button>
+  </div>
+
+
+  <input class="hide" type="text" value="failed to copy to clipboard" id="TargetMessage">
+  <p class="hide" id="letter cooldown"></p>
+  <p class="InfoText" id="infoText" style="animation-play-state:paused;">Oops! You arent supposed to see this :(</p>
+
+  <script src="/socket.io/socket.io.js"></script>
+
+  <script src="scripts/collapsibles.js"></script>
+  <script src="client.js"></script>
+  <script src="scripts/socketEvent.js"></script>
+  <script src="scripts/moveelement.js"></script>  
+  <script src="scripts/emojis.js"></script>
+  <script src="scripts/reloads.js"></script>
+  <script src="scripts/UCGUI.js"></script>
+  <script src="scripts/tick.js"></script>
+  <script src="scripts/image.js"></script>
+  <script src="scripts/ShowInfo.js"></script>
+  <script src="scripts/serverStorageInteractor.js"></script>
+  <script src="scripts/InfoButtons.js"></script>
+  <script src="scripts/typingIndicator.js"></script>
+</body>
+
+</html>
