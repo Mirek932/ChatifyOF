@@ -146,7 +146,10 @@
         border-radius: 3px;
         outline: none;
     }
-
+    .UsernameChangeInput{
+        background-color: #031834;
+        border: solid #0d55ac 1px;
+    }
     #board {
         height: 10006%;
     }
